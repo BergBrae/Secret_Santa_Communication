@@ -1,10 +1,6 @@
-import numpy as np
 import pickle
 from twilio.rest import Client
-from flask import Flask, request, redirect
-from twilio.twiml.messaging_response import MessagingResponse
-from twilio import twiml
-import os
+from flask import Flask, request
 import openai
 import config
 from config import other_number, API_numbers, API_numbers_reversed
