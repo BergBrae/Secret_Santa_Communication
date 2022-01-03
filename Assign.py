@@ -1,7 +1,8 @@
-import pandas as pd
-import numpy as np
 import pickle
 import random
+
+import numpy as np
+import pandas as pd
 
 # Load names and numbers from from namesandnumbers.xlsx
 data = np.array(pd.read_excel('namesandnumbers.xlsx'))

@@ -64,7 +64,6 @@ def santa_talk(text):
 client = Client(config.account_sid, config.auth_token)
 
 
-
 def send_message(person, body_text, format):
     if format == 'to santa':
         body_text = santa_talk(body_text.strip())
