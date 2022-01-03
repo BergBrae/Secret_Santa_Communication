@@ -7,11 +7,6 @@ name_phone, phone_name, santa_child, child_santa = pickle.load(open('assignments
 
 client = Client(config.account_sid, config.auth_token)
 
-API_numbers = {
-    'santa': config.santa_number,
-    'child': config.child_number
-}
-
 
 def init_message_santa(person, child):
     return f"Hello {person}, this year your child is **{child}**. You can text them here. You can see their name, " \
@@ -26,8 +21,8 @@ def init_message_child(person):
 
 for santa, child in santa_child.items():
     client.messages.create(body=init_message_santa(santa, child),
-                           from_=API_numbers['santa'],
+                           from_=config.API_numbers['santa'],
                            to=name_phone[santa])
     client.messages.create(body=init_message_child(child),
-                           from_=API_numbers['child'],
+                           from_=config.API_numbers['child'],
                            to=name_phone[santa])
