@@ -14,7 +14,7 @@ def init_message_santa(person, child):
            f"the translation after sending. "
 
 
-def init_message_child(person):
+def init_message_child():
     return f"This is a chat with your Secret Santa. They can see your name, but you can't see theirs. Your texts are " \
            f"translated to sound like a toddler when you send them. You will see the translation after sending. "
 
@@ -23,6 +23,6 @@ for santa, child in santa_child.items():
     client.messages.create(body=init_message_santa(santa, child),
                            from_=config.API_numbers['santa'],
                            to=name_phone[santa])
-    client.messages.create(body=init_message_child(child),
+    client.messages.create(body=init_message_child(),
                            from_=config.API_numbers['child'],
                            to=name_phone[santa])

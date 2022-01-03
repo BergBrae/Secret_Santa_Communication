@@ -4,7 +4,7 @@ import pickle
 import random
 
 # Load names and numbers from from namesandnumbers.xlsx
-data = np.array(pd.read_excel('namesandnumbers.xlsx', header=None))
+data = np.array(pd.read_excel('namesandnumbers.xlsx'))
 name_phone = {}  # Name -> phone
 for i in range(len(data)):
     row = data[i]
