@@ -43,12 +43,6 @@ while bad_assignment(santa_stack, child_stack):
 santa_child = {s: c for s, c in zip(santa_stack, child_stack)}
 child_santa = {c: s for s, c in santa_child.items()}
 
-# while santa_stack and child_stack:
-#     for s, c in zip(santa_stack, child_stack):
-#         santa_child[s] = c
-#         santa_stack.remove(s)
-#         child_stack.remove(c)
-
 assert tot_people == len(santa_child), 'Number of assignments is not equal to the number of people'
 
 pickle.dump([name_phone, phone_name, santa_child, child_santa], open('assignments', 'wb'))
