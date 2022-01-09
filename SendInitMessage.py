@@ -1,3 +1,5 @@
+# Uses participants and assignments from saved pickle to send an initial message explaining how the system works and their assinged person.
+
 import pickle
 import config
 from twilio.rest import Client
