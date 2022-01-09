@@ -1,4 +1,4 @@
-# Opens texting using participants and assignments in pickle.
+# Opens texting using participants and assignments in pickle. Also sends "Texting is now online"
 
 import pickle
 from twilio.rest import Client
