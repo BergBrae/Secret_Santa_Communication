@@ -1,3 +1,5 @@
+# Opens texting using participants and assignments in pickle.
+
 import pickle
 from twilio.rest import Client
 from flask import Flask, request
