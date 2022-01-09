@@ -1,3 +1,6 @@
+#Assigns participants automatically from excel file and saves to pickle to be used by other programs.
+
+
 import pickle
 import random
 
